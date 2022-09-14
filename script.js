@@ -50,6 +50,7 @@ const typeController = (e) => {
         display.innerHTML += `<span class="red">${
             newLetter === " " ? "▪" : newLetter
         }</span>`;
+        errorCount += 1;
     }
 
     // check if given question text is equal to user typed text
@@ -71,7 +72,8 @@ const gameOver = () => {
     // the current time is the finish time
     // so total time taken is current time - start time
     const finishTime = new Date().getTime();
-    const timeTaken = (finishTime - startTime) / 1000;
+    const timeTakenFloat = (finishTime - startTime) / 1000;
+    const timeTaken = parseInt(timeTakenFloat);
 
     // show result modal
     resultModal.innerHTML = "";
@@ -140,6 +142,6 @@ setInterval(() => {
     const timeSpent = (currentTime - startTime) / 1000;
 
     document.getElementById("show-time").innerHTML = `${
-        startTime ? timeSpent : 0
+        startTime ? parseInt(timeSpent) : 0
     } seconds`;
 }, 1000);
