@@ -44,7 +44,7 @@ const typeController = (e) => {
 
     if (newLetterCorrect) {
         display.innerHTML += `<span class="green">${
-            newLetter === " " ? "▪" : newLetter
+            newLetter === " " ? "\xa0" : newLetter
         }</span>`;
     } else {
         display.innerHTML += `<span class="red">${
