@@ -134,9 +134,22 @@ function myFunction() {
 						  aria-labelledby="headingThree"
 						  data-bs-parent="#accordionExample"
 						>
-						  <div class="accordion-body bg-clr">
+						  <div class="accordion-body bg-clr text-white">
 							<p class="text-white">
-							  Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.
+							  Event Loop: 
+							  <h1></h1>
+							  The event loop is the secret by which JavaScript gives us an illusion of being multithreaded even though it is single-threaded. <h1></h1>
+							  Event loop functioning consists of 3 parts: <br>
+							  1. Stack <br>
+							  2. Web api <br>
+							  3. Event queue <br>
+								<h1></h1>
+							  Event queue stores asynchronous code [i.e. SetTimeOut()] and is wait for its time into the stack when the SetTimeOut() is being executed and the Web API is making the mentioned wait. <h1></h1>
+
+							  That is where the event loop comes into picture, it takes the first event from the Event Queue and places it onto the stack i.e in this case the callback function. From here, this function executes calling other functions inside it, if any.
+
+							  <br>
+							  This cycle is called the event loop and this how JavaScript manages its events.
   
   
 							</p>
@@ -163,10 +176,10 @@ function myFunction() {
 						aria-labelledby="headingFour"
 						data-bs-parent="#accordionExample"
 					  >
-						<div class="accordion-body bg-clr">
+						<div class="accordion-body bg-clr text-white">
 						  <p class="text-white">
 							
-							There are 8 ways to get undefined. <br>
+							There are 8 ways to get undefined: <h1></h1>
 							1. Variable that is not initialized. <br>
 							2. function with no return. <br>
 							3. parameter that is not passed. <br>
