@@ -44,7 +44,7 @@ const typeController = (e) => {
 
     if (newLetterCorrect) {
         display.innerHTML += `<span class="green">${
-            newLetter === " " ? "\xa0" : newLetter
+            newLetter === " " ? "▪" : newLetter
         }</span>`;
     } else {
         display.innerHTML += `<span class="red">${
@@ -127,7 +127,7 @@ const start = () => {
             startTime = new Date().getTime();
         }
         count--;
-    }, 500);
+    }, 1000);
 };
 
 // START Countdown

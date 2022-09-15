@@ -1,3 +1,8 @@
+:root {
+    --secondary: #232b38;
+    --footer: #2d333f;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -16,6 +21,25 @@ body {
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 25px;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s linear;
+}
+header a:hover {
+    border-bottom: 2px solid #9dffad;
+}
+header div {
+    display: flex;
+    align-items: center;
+}
 #question {
     height: 100px;
     display: flex;
@@ -97,7 +121,7 @@ body {
     display: none;
 }
 .title {
-    text-align: center;
+    /* text-align: center; */
     color: white;
     margin: 20px 0;
 }
@@ -181,6 +205,12 @@ button {
     width: 100%;
     position: fixed;
     top: 0;
+}
+.bg-clr {
+    background-color: var(--secondary);
+}
+.bg-clr2 {
+    background-color: var(--ternary);
 }
 
 @media only screen and (max-width: 700px) {
