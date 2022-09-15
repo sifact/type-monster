@@ -45,7 +45,23 @@
 					  >
 						<div class="accordion-body bg-clr">
 						  <p class="text-white">
-							In the early days of JavaScript, there was only one way to declare variables and that was using the var keyword. However, there were some issues associated with varia
+							Session Storage: <br>
+							
+							It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, until the browser (or tab) is closed. <br>
+							sessionStorage data is cleared when the page session ends. <br>
+							The storage capacity of session storage is 5MB. <br>
+							</p>
+
+<h1></h1>
+<p class="text-white">
+Local Storage: <br>
+This read-only interface property provides access to the Document’s local storage object, the stored data is stored across browser sessions. <br>
+As it is not session-based, it must be deleted via javascript or manually. <br>
+localStorage data does not expire. <br>
+The storage capacity of local storage is 5MB/10MB. <br>
+
+
+</p>
 						</div>
 					  </div>
 					</div>
@@ -71,9 +87,29 @@
 					  >
 						<div class="accordion-body bg-clr">
 						  <p class="text-white">
-							Before ES6, wi use single quotes (') or double quotes (") to wrap a string literal. And the strings have very limited functionality.
+							Global Scope: <br>
+							Variables declared Globally (outside any function) have Global Scope. <br>
 
-in HTML.
+Global variables can be accessed from anywhere in a JavaScript program. <br>
+
+Variables declared with var, let and const are quite similar when declared outside a block. <br>
+Ex: <br>
+var x = 2;       // Global scope <br>
+</p>
+<p></p>
+<p class="text-white">
+Local Scope: <br>
+Variables declared within a JavaScript function, become LOCAL to the function. Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+
+Local variables are created when a function starts, and deleted when the function is completed. <br>
+Ex: <br>
+function myFunction() {
+	let carName = "Volvo";
+	
+  }
+  
+
+
 						  </p>
 						</div>
 					  </div>
@@ -102,15 +138,7 @@ in HTML.
 							<p class="text-white">
 							  Inside of a regular JavaScript function, this value (aka the execution context) is dynamic.
   
-  The dynamic context means that the value of this depends on how the function is invoked. In JavaScript, there are 4 ways you can invoke a regular function.
   
-  The behavior of this inside of an arrow function differs considerably from the regular function's this behavior. The arrow function doesn't define its own execution context.
-  
-  As seen in the previous section, the regular function can easily construct objects.
-  A consequence of this resolved lexically is that an arrow function cannot be used as a constructor.
-  
-  Inside the body of a regular function, arguments is a special array-like object containing the list of arguments with which the function has been invoked.
-  On the other side, no arguments special keyword is defined inside an arrow function.
 							</p>
 						  </div>
 						</div>
